@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox1</title>
+    <style>
+        body {
+            background-color: rgb(246, 246, 238);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            margin: auto;
+        }
+
+        .container div {
+            width: 31%;
+            padding: 15px;
+            box-sizing: border-box;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            margin: 5px;
+        }
+
+        .container div img {
+            display: block;
+            margin: 0 auto 10px;
+            border-radius: 10px;
+        }
+
+        .container div h2,
+        p {
+            margin: 20px 10px 10px 10px;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            color: grey;
+            line-height: 1.5;
+            font-size: 17px;
+            font-weight: 200;
+        }
+
+        h2 {
+            font-size: 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="residential">
+            <img src="images/residential.jpg" alt="residential Image" style="width:100%;">
+            <h2>Residential projects</h2>
+            <p>We build sustainable and modern homes for comfortable living.</p>
+        </div>
+        <div class="commercial">
+            <img src="images/commercial.jpg" alt="commercial Image" style="width:100%;">
+            <h2>Commercial spaces</h2>
+            <p>We create efficient,
+                inspiring workspaces for businesses of all sizes.</p>
+        </div>
+        <div class="infrastructure">
+            <img src="images/infrastructure.jpg" alt="infrastructure Image" style="width:100%;">
+            <h2>Infrastructure works</h2>
+            <p>We develop strong,
+                reliable infrastructure for growing communities.</p>
+        </div>
+    </div>
+</body>
+
+</html>
