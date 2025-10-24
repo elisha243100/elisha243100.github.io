@@ -19,26 +19,30 @@
 
         body {
             font-family: 'Space Grotesk', sans-serif;
-            background-color: #ffffff;
+            background-color: #000000;
         }
 
         .container {
+            background-color: #ffffff;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             text-align: center;
+            padding: 100px 500px;
         }
 
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 40px;
+            padding: 10px 0px;
+            gap: 120px;
+            margin: 0 0 -90px 10px;
         }
 
         .logo {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 10px;
             font-weight: 700;
             color: #000;
@@ -54,13 +58,15 @@
             text-decoration: none;
             color: #191a23;
             font-size: 20px;
+            ;
         }
 
         .nav-links a.request-quote {
-            padding: 8px 15px;
+            padding: 20px 35px;
             color: rgb(0, 0, 0);
             border: #333 solid 2px;
             border-radius: 10px;
+            margin: 10px;
             font-weight: thin;
         }
 
@@ -78,35 +84,39 @@
         .container2 h1,
         p,
         a.book-consultation {
-            margin-left: 20px;
+            margin: 20px 10px 10px 10px;
         }
 
         .container2 img {
             position: absolute;
-            left: 1000px;
+            left: 600px;
             width: 600.46px;
             height: 515px;
             align-items: right;
         }
 
         .container2 h1 {
-            font-size: 36px;
+            font-size: 60px;
             margin-bottom: 20px;
+            width: 531px;
+            height: 231px;
         }
 
         .container2 p {
-            font-size: 18px;
+            font-size: 20px;
             color: #555;
-            margin-bottom: 30px;
+            width: 498px;
+            height: 112px;
+            /* margin-bottom: 30px; */
         }
 
         .container2 a.book-consultation {
             display: inline-block;
-            padding: 12px 25px;
+            padding: 20px 35px;
             background-color: #000000;
             color: #fff;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 15px;
             font-weight: thin;
             margin-bottom: 40px;
         }
