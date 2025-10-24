@@ -23,13 +23,14 @@
             background-color: #f7f6f1;
         }
 
-        .header {
+
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 40px;
-            background-color: #fff;
-            border-bottom: 1px solid #eee;
+            padding: 10px 40px;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
         }
 
         .logo {
@@ -40,144 +41,110 @@
             color: #333;
         }
 
-
         .logo img {
             height: 30px;
         }
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 50px;
-            background-color: #fff;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-        }
-
         .nav-links a {
+            margin: 0 12px;
             text-decoration: none;
             color: #333;
-            font-weight: 500;
+            font-size: 14px;
         }
 
         .nav-links a.active {
-            color: #ff652f;
+            color: #FF6A33;
+            font-weight: bold;
+        }
+
+        .right-menu {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .phone-icon {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .phone-number {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .contact-btn {
+            background: #FF6A33;
+            color: #fff;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        header2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 10px;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            margin: 10px 100px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: relative;
         }
 
         .nav-contact {
             display: flex;
-            align-items: center;
-            gap: 15px;
+            position: absolute;
+            right: 50px;
+            left: auto;
+            font-size: 15px;
+            font-weight: bold
         }
 
-        .phone {
-            font-weight: 600;
-            color: #333;
-        }
-
-        .btn {
-            background-color: #ff652f;
-            color: #fff;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #e9551c;
-        }
-
-        /* ---------- Responsive Design ---------- */
         .menu-toggle {
-            display: none;
+            position: absolute;
+            right: 10px;
             font-size: 24px;
             cursor: pointer;
         }
 
-
-        @media (max-width: 1279px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                gap: 10px;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                right: 0;
-                background: #fff;
-                padding: 15px;
-                border-top: 1px solid #ddd;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .nav-contact {
-                display: flex;
-                position: absolute;
-                right: 100px;
-                left: auto;
-            }
-
-            .btn {
-                display: none;
-            }
+        header3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 10px;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            margin: 10px 200px;
         }
 
-        /* ---------- Phone number visibility ---------- */
-        @media (max-width: 601px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                gap: 10px;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                right: 0;
-                background: #fff;
-                padding: 15px;
-                border-top: 1px solid #ddd;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .nav-contact {
-                display: none;
-                align-items: right;
-            }
-
-            .btn {
-                display: none;
-            }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: relative;
         }
     </style>
 
 </head>
 
 <body>
-    <header class="navbar">
+    <header>
         <div class="logo">
-            <img src="images/elementra logo.png" alt="Elementra Logo" />
+            <img src="images/elementra logo.png" alt="Logo">
         </div>
 
-        <nav class="nav-links" id="navLinks">
+        <nav class="nav-links">
             <a href="#">Home</a>
             <a href="#" class="active">Services</a>
             <a href="#">Work</a>
@@ -185,14 +152,31 @@
             <a href="#">Contact</a>
         </nav>
 
-        <div class="nav-contact">
-            <span class="box">📞 555-123-4567</span>
-            <button class="btn">Contact</button>
+        <div class="right-menu">
+            <span class="phone-icon">📞</span>
+            <span class="phone-number">555-123-4567</span>
+            <button class="contact-btn">Contact</button>
         </div>
-
-        <div class="menu-toggle" id="menuToggle">☰</div>
     </header>
-
+    <header2>
+        <div class="container">
+            <div class="logo">
+                <img src="images/elementra logo.png" alt="Logo">
+            </div>
+            <div class="nav-contact">
+                <span class="box">📞 555-123-4567</span>
+            </div>
+            <div class="menu-toggle">☰</div>
+        </div>
+    </header2>
+    <header3>
+        <div class="container">
+            <div class="logo">
+                <img src="images/elementra logo.png" alt="Logo">
+            </div>
+            <div class="menu-toggle">☰</div>
+        </div>
+    </header3>
 
 </body>
 
