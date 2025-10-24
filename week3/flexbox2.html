@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -124,6 +125,42 @@
 
             .nav-contact {
                 display: flex;
+                position: absolute;
+                right: 100px;
+                left: auto;
+            }
+
+            .btn {
+                display: none;
+            }
+        }
+
+        /* ---------- Phone number visibility ---------- */
+        @media (max-width: 601px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                padding: 15px;
+                border-top: 1px solid #ddd;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-contact {
+                display: none;
+                align-items: right;
             }
 
             .btn {
@@ -131,6 +168,7 @@
             }
         }
     </style>
+
 </head>
 
 <body>
@@ -148,18 +186,14 @@
         </nav>
 
         <div class="nav-contact">
-            <span class="phone">📞 555-123-4567</span>
+            <span class="box">📞 555-123-4567</span>
             <button class="btn">Contact</button>
         </div>
+
         <div class="menu-toggle" id="menuToggle">☰</div>
     </header>
-    <script>
-        const toggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-        toggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    </script>
+
+
 </body>
 
 </html>
