@@ -12,13 +12,21 @@
         rel="stylesheet">
     <style>
         * {
-            margin: 0;
+            margin: 30px;
             padding: 0;
             box-sizing: border-box;
         }
 
         body {
             font-family: 'Space Grotesk', sans-serif;
+            background-color: #ffffff;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: center;
         }
 
         header {
@@ -31,31 +39,32 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             font-weight: 700;
             color: #000;
         }
 
         .logo img {
-            height: 30px;
+            height: 56px;
+            width: 219.54px;
         }
 
         .nav-links a {
             margin: 0 12px;
             text-decoration: none;
             color: #191a23;
-            font-size: 14px;
+            font-size: 20px;
         }
 
         .nav-links a.request-quote {
             padding: 8px 15px;
             color: rgb(0, 0, 0);
             border: #333 solid 2px;
-            border-radius: 5px;
-            font-weight: bold;
+            border-radius: 10px;
+            font-weight: thin;
         }
 
-        .container {
+        .container2 {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -63,21 +72,35 @@
             margin: 40px 50px;
             padding: 60px 20px;
             position: relative;
-            width: 0%;
+            width: 30%;
         }
 
-        .container h1 {
+        .container2 h1,
+        p,
+        a.book-consultation {
+            margin-left: 20px;
+        }
+
+        .container2 img {
+            position: absolute;
+            left: 1000px;
+            width: 600.46px;
+            height: 515px;
+            align-items: right;
+        }
+
+        .container2 h1 {
             font-size: 36px;
             margin-bottom: 20px;
         }
 
-        .container p {
+        .container2 p {
             font-size: 18px;
             color: #555;
             margin-bottom: 30px;
         }
 
-        .container a.book-consultation {
+        .container2 a.book-consultation {
             display: inline-block;
             padding: 12px 25px;
             background-color: #000000;
@@ -96,46 +119,48 @@
             padding: 20px 0;
         }
 
-        nav-link img {
+        nav-link2 img {
             height: 40px;
-            opacity: 0.7;
-        }
-
-        nav-link img:hover {
-            opacity: 1;
+            ;
+            align-items: center;
+            gap: 20px;
+            filter: grayscale(100%)
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/Positivuslogo.png" alt="Logo">
-        </div>
-        <div class="nav-links">
-            <a href="#">About Us</a>
-            <a href="#">Services</a>
-            <a href="#">Use Cases</a>
-            <a href="#">Pricing</a>
-            <a href="#">Blog</a>
-            <a class="request-quote" href="#">Request a Quote</a>
-        </div>
-    </header>
     <div class="container">
-        <h1>Navigating the digital landscape for success</h1>
-        <p>Our digital marketing agency helps businesses grow and succeed online through a range of services including
-            SEO, PPC, social media marketing, and content creation.</p>
-        <a class="book-consultation" href="#">Book a Consultation</a>
-        <img src="images/illustration.png" alt="Illustration">
+        <header>
+            <div class="logo">
+                <img src="images/Positivuslogo.png" alt="Logo">
+            </div>
+            <div class="nav-links">
+                <a href="#">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Use Cases</a>
+                <a href="#">Pricing</a>
+                <a href="#">Blog</a>
+                <a class="request-quote" href="#">Request a quote</a>
+            </div>
+        </header>
+        <div class="container2">
+            <h1>Navigating the digital landscape for success</h1>
+            <p>Our digital marketing agency helps businesses grow and succeed online through a range of services
+                including
+                SEO, PPC, social media marketing, and content creation.</p>
+            <a class="book-consultation" href="#">Book a Consultation</a>
+            <img src="images/illustration.png" alt="Illustration">
+        </div>
+        <nav-link2>
+            <img src="images/amazon.png" alt="Amazon Logo">
+            <img src="images/dribble.png" alt="Dribbble Logo">
+            <img src="images/HubSpot.png" alt="HubSpot Logo">
+            <img src="images/Notion.png" alt="Notion Logo">
+            <img src="images/Netflix.png" alt="Netflix Logo">
+            <img src="images/zoom.png" alt="Zoom Logo">
+        </nav-link2>
     </div>
-    <nav-link>
-        <img src="images/amazon.png" alt="Amazon Logo">
-        <img src="images/dribble.png" alt="Dribbble Logo">
-        <img src="images/HubSpot.png" alt="HubSpot Logo">
-        <img src="images/Notion.png" alt="Notion Logo">
-        <img src="images/Netflix.png" alt="Netflix Logo">
-        <img src="images/zoom.png" alt="Zoom Logo">
-    </nav-link>
 </body>
 
 </html>
