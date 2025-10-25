@@ -19,7 +19,7 @@
 
         body {
             font-family: 'Space Grotesk', sans-serif;
-            background-color: #000000;
+            /* background-color: #000000; */
         }
 
         .container {
@@ -27,8 +27,10 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            text-align: center;
-            padding: 100px 500px;
+            max-width: 1440px;
+            height: 8356px;
+            margin: 0 auto;
+            padding: 0 20px 40px 40px;
         }
 
         header {
@@ -37,7 +39,6 @@
             align-items: center;
             padding: 10px 0px;
             gap: 120px;
-            margin: 0 0 -90px 10px;
         }
 
         .logo {
@@ -75,7 +76,7 @@
             flex-direction: column;
             align-items: flex-start;
             text-align: left;
-            margin: 40px 50px;
+            margin: -80px 50px -60px;
             padding: 60px 20px;
             position: relative;
             width: 30%;
@@ -100,11 +101,13 @@
             margin-bottom: 20px;
             width: 531px;
             height: 231px;
+            font-weight: 500;
         }
 
         .container2 p {
             font-size: 20px;
-            color: #555;
+            font-weight: 400;
+            color: #000000;
             width: 498px;
             height: 112px;
             /* margin-bottom: 30px; */
@@ -121,20 +124,35 @@
             margin-bottom: 40px;
         }
 
-        nav-link {
+        .nav-link2 {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 40px;
-            padding: 20px 0;
+            gap: 25px;
+            padding: 20px 90px;
+            margin: 10px -40px;
         }
 
-        nav-link2 img {
+        .nav-link2 img {
+            filter: grayscale(100%);
+            justify-content: center;
+        }
+
+        .dribble {
+            width: 126.37px;
             height: 40px;
-            ;
-            align-items: center;
-            gap: 20px;
-            filter: grayscale(100%)
+            padding-bottom: 15px;
+        }
+
+        .Netflix {
+            width: 125.24px;
+            height: 35px;
+        }
+
+        .zoom {
+            width: 110.57px;
+            height: 25px;
+            margin-top: 0 px;
         }
     </style>
 </head>
@@ -162,14 +180,14 @@
             <a class="book-consultation" href="#">Book a Consultation</a>
             <img src="images/illustration.png" alt="Illustration">
         </div>
-        <nav-link2>
+        <div class="nav-link2">
             <img src="images/amazon.png" alt="Amazon Logo">
-            <img src="images/dribble.png" alt="Dribbble Logo">
+            <img class="dribble" src="images/dribble.png" alt="Dribbble Logo">
             <img src="images/HubSpot.png" alt="HubSpot Logo">
             <img src="images/Notion.png" alt="Notion Logo">
-            <img src="images/Netflix.png" alt="Netflix Logo">
-            <img src="images/zoom.png" alt="Zoom Logo">
-        </nav-link2>
+            <img class="Netflix" src="images/Netflix.png" alt="Netflix Logo">
+            <img class="zoom" src="images/zoom.png" alt="Zoom Logo">
+        </div>
     </div>
 </body>
 
