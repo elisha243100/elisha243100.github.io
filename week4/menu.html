@@ -62,19 +62,26 @@
             font-weight: 500;
         }
 
+        .nav-links :hover {
+            color: #ff652f;
+        }
+
         .nav-links a.active {
             color: #ff652f;
         }
+
 
         .nav-contact {
             display: flex;
             align-items: center;
             gap: 15px;
+
         }
 
         .phone {
             font-weight: 600;
-            color: #333
+            color: #333;
+            cursor: pointer;
         }
 
         .btn {
@@ -87,6 +94,7 @@
 
         .btn:hover {
             background-color: #e9551c;
+            cursor: pointer;
         }
 
         /* Responsive Design */
@@ -165,7 +173,7 @@
         </div>
         <nav class="nav-links" id="navlinks">
             <a href="#">Home</a>
-            <a href="#">Services</a>
+            <a href="#" class="active">Services</a>
             <a href="#">Work</a>
             <a href="#">Project Details</a>
             <a href="#">Contact</a>
