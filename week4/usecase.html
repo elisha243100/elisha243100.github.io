@@ -5,30 +5,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usecase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            color: #000;
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 35px 0px;
+            padding: 25px 60px;
         }
 
-        .logo img {
-            height: 55px;
+        .logo {
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
         }
 
         .nav-links a {
-            margin: 0 18px;
             text-decoration: none;
-            color: #191a23;
-            font-size: 18px;
+            color: #000;
+            font-weight: 500;
         }
 
-        .nav-links .request-quote {
-            padding: 18px 28px;
+        .quote-btn {
             border: #191a23 solid 2px;
+            background: none;
+            padding: 18px 28px;
             border-radius: 10px;
-            font-weight: thin;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+
+        /* Hero Section */
+        .hero {
+            background-color: #f4f4f4;
+            border-radius: 16px;
+            margin: 50px 60px;
+            padding: 40px;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-img {
+            width: 40%;
+            border-radius: 10px;
+        }
+
+        .hero-text h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            color: #333;
+            max-width: 600px;
+        }
+
+        /* Success Story Section */
+        .success-story {
+            display: flex;
+            justify-content: space-between;
+            background-color: #0f0f0f;
+            color: #fff;
+            margin: 50px 60px;
+            padding: 50px;
+            border-radius: 16px;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .highlight {
+            background-color: #ccff00;
+            color: #191A23;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .story-text h2 {
+            margin: 15px 0;
+            font-size: 1.5rem;
+        }
+
+        .story-text p {
+            color: #ccc;
+            margin-bottom: 20px;
+            max-width: 400px;
+        }
+
+        .read-link {
+            color: #ccff00;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .stat-box {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-box h3 {
+            color: #000000;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        .stat-box p {
+            color: #000000;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .success-story {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -38,15 +170,57 @@
         <div class="logo">
             <img src="images/Positivuslogo.png" alt="Logo">
         </div>
-        <div class="nav-links">
-            <a href="#">About Us</a>
-            <a href="#">Services</a>
-            <a href="#">Use Cases</a>
-            <a href="#">Pricing</a>
-            <a href="#">Blog</a>
-            <a class="request-quote" href="#">Request a quote</a>
-        </div>
+        <nav>
+            <div class="nav-links">
+                <a href="#">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Use Cases</a>
+                <a href="#">Pricing</a>
+                <a href="#">Blog</a>
+            </div>
+        </nav>
+        <button class="quote-btn">Request a quote</button>
+
     </header>
+    <section class="hero">
+        <div class="hero-content">
+            <img src="images/illustrations.png" alt="Illustration" class="hero-img">
+            <div class="hero-text">
+                <h1>Proven Success Stories</h1>
+                <p>See how our innovative digital marketing strategies have transformed businesses. Whether through SEO,
+                    PPC, social media, or web design, these use cases highlight the tangible impact of our work. Explore
+                    the successes and envision what we can achieve together.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="success-story">
+        <div class="story-text">
+            <span class="highlight">Featured Success Story</span>
+            <h2>Scaling Success for a Leading E-Commerce Brand</h2>
+            <p>Through a comprehensive SEO and PPC strategy, we helped this e-commerce brand increase visibility, drive
+                traffic, and boost sales.</p>
+            <a href="#" class="read-link">Read →</a>
+        </div>
+        <div class="stats">
+            <div class="stat-box">
+                <h3>200%</h3>
+                <p>increase in organic traffic</p>
+            </div>
+            <div class="stat-box">
+                <h3>150%</h3>
+                <p>rise in online sales</p>
+            </div>
+            <div class="stat-box">
+                <h3>75%</h3>
+                <p>reduction in cost-per-click (CPC)</p>
+            </div>
+            <div class="stat-box">
+                <h3>300%</h3>
+                <p>improvement in conversion rate</p>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
