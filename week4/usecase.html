@@ -16,13 +16,12 @@
         }
 
         body {
-            font-family: 'Space Grotesk', sans-serif;
-            color: #191A23;
+            font-family: "Space Grotesk", sans-serif;
+            color: #191a23;
             background-color: #ffffff;
             line-height: 1.6;
         }
 
-        /* HEADER */
         header {
             display: flex;
             justify-content: space-between;
@@ -31,13 +30,13 @@
         }
 
         .logo img {
-            width: 140px;
+            width: 130px;
             height: auto;
         }
 
         nav .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 35px;
             align-items: center;
         }
 
@@ -45,9 +44,11 @@
             text-decoration: none;
             color: #191a23;
             font-weight: 500;
-            padding: 6px 12px;
+            padding: 6px 10px;
             border-radius: 6px;
+            transition: all 0.2s ease;
         }
+
 
         .nav-links a.active {
             background-color: #ccff00;
@@ -56,31 +57,52 @@
         .quote-btn {
             border: 2px solid #191a23;
             background: none;
-            padding: 10px 22px;
+            padding: 12px 24px;
             border-radius: 10px;
             font-weight: 600;
             cursor: pointer;
+            transition: all 0.2s ease;
         }
 
-        /* HERO SECTION */
+        .quote-btn:hover {
+            background: #191a23;
+            color: white;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
         .hero {
             background-color: #f4f4f4;
-            border-radius: 20px;
+            border-radius: 25px;
             margin: 60px 80px;
             padding: 60px;
         }
 
         .hero-content {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
+            gap: 60px;
             flex-wrap: wrap;
-            gap: 40px;
+        }
+
+        .hero-text1 {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-text1 h1 {
+            display: none;
         }
 
         .hero-img {
-            width: 45%;
-            min-width: 280px;
+            width: 80%;
+            max-width: 400px;
+            height: auto;
         }
 
         .hero-text {
@@ -96,19 +118,19 @@
         .hero-text p {
             color: #333;
             max-width: 600px;
-            font-size: 1rem;
+            font-size: 100%;
             line-height: 1.7;
         }
 
-        /* SUCCESS STORY SECTION */
         .success-story {
             display: flex;
             justify-content: space-between;
-            background-color: #191A23;
+            align-items: flex-start;
+            background-color: #191a23;
             color: #fff;
             margin: 60px 80px;
             padding: 60px;
-            border-radius: 20px;
+            border-radius: 25px;
             gap: 60px;
             flex-wrap: wrap;
         }
@@ -117,14 +139,36 @@
             flex: 1;
         }
 
+        .highlight1 {
+            display: inline-flex;
+            align-items: center;
+            background-color: #ccff00;
+            color: #191a23;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            gap: 8px;
+        }
+
+        .star img {
+            width: 40px;
+
+        }
+
+        .story-text .star {
+            display: none;
+        }
+
         .highlight {
-            background-color: #CCFF00;
-            color: #191A23;
+            display: inline-block;
+            background-color: #ccff00;
+            color: #191a23;
             padding: 4px 10px;
             border-radius: 4px;
             font-weight: 600;
             font-size: 0.9rem;
-            display: inline-block;
+            margin-top: 14px;
         }
 
         .story-text h2 {
@@ -136,21 +180,31 @@
 
         .story-text p {
             color: #ccc;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             max-width: 420px;
             font-size: 0.95rem;
         }
 
         .read-link {
-            color: #CCFF00;
+            color: #ccff00;
             text-decoration: none;
             font-weight: 600;
             font-size: 1rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+            margin-left: 6px;
+            vertical-align: middle;
         }
 
+        .read-link2 {
+            color: #ccff00;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+
+
+        /* STATS GRID */
         .stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -161,8 +215,8 @@
 
         .stat-box {
             background: #ffffff;
-            border-radius: 10px;
-            padding: 25px;
+            border-radius: 15px;
+            padding: 30px;
             text-align: center;
         }
 
@@ -177,12 +231,22 @@
             font-size: 0.95rem;
         }
 
-        /* RESPONSIVE */
+        .stats .read2 {
+            display: none;
+        }
+
+        /* RESPONSIVE DESIGN */
         @media (max-width: 1000px) {
             header {
-                flex-direction: column;
-                gap: 20px;
                 padding: 25px 40px;
+            }
+
+            nav .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
             }
 
             .hero {
@@ -194,16 +258,35 @@
                 margin: 40px 20px;
                 padding: 40px;
             }
+
+            .story-text .highlight {
+                display: none;
+            }
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 800px) {
+            .hero {
+                background-color: #ffffff;
+            }
+
             .hero-content {
                 flex-direction: column;
                 text-align: center;
             }
 
+            .hero-text1 h1 {
+                display: block;
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            .hero-text h1 {
+                display: none;
+            }
+
             .hero-img {
                 width: 100%;
+                max-width: 300px;
             }
 
             .success-story {
@@ -212,7 +295,29 @@
             }
 
             .stats {
-                grid-template-columns: 1fr;
+                grid-template-columns: 100%;
+            }
+
+            .story-text p {
+                margin: 0 auto 20px;
+            }
+
+            .story-text .star {
+                display: block;
+            }
+
+            .read-link {
+                display: none;
+            }
+
+            .stats .read2 {
+                display: block;
+            }
+
+            .highlight,
+            .highlight1 {
+                display: inline-block;
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -234,12 +339,16 @@
             </div>
         </nav>
         <button class="quote-btn">Request a quote</button>
+        <div class="menu-toggle">☰</div>
     </header>
 
     <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
-            <img src="images/illustrations.png" alt="Illustration" class="hero-img">
+            <div class="hero-text1">
+                <h1>Proven Success Stories</h1>
+                <img src="images/illustrations.png" alt="Illustration" class="hero-img">
+            </div>
             <div class="hero-text">
                 <h1>Proven Success Stories</h1>
                 <p>See how our innovative digital marketing strategies have transformed businesses. Whether through SEO,
@@ -254,12 +363,15 @@
     <!-- SUCCESS STORY -->
     <section class="success-story">
         <div class="story-text">
+            <span class="star"><img src="images/star.png"> FEATURED</span>
             <span class="highlight">Featured Success Story</span>
             <h2>Scaling Success for a Leading E-Commerce Brand</h2>
             <p>Through a comprehensive SEO and PPC strategy, we helped this e-commerce brand increase visibility, drive
                 traffic,
                 and boost sales.</p>
-            <a href="#" class="read-link">Read <img src="images/arrow.png" alt="arrow" width="20"></a>
+            <div class="read-link">
+                <img src="images/arrow.png" alt="arrow" width="20"><a href="#" class="read-link">Read</a>
+            </div>
         </div>
 
         <div class="stats">
@@ -278,6 +390,9 @@
             <div class="stat-box">
                 <h3>300%</h3>
                 <p>improvement in conversion rate</p>
+            </div>
+            <div class="read2">
+                <img src="images/arrow.png" alt="arrow" width="20"><a href="#" class="read-link2">Read</a>
             </div>
         </div>
     </section>
