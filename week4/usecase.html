@@ -34,24 +34,29 @@
             height: auto;
         }
 
-        nav .nav-links {
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links {
             display: flex;
             gap: 35px;
-            align-items: center;
         }
 
         .nav-links a {
             text-decoration: none;
             color: #191a23;
             font-weight: 500;
-            padding: 6px 10px;
-            border-radius: 6px;
-            transition: all 0.2s ease;
         }
 
 
         .nav-links a.active {
             background-color: #ccff00;
+            border: #ccff00 solid 2px;
+            border-radius: 10px;
+            padding: 0px 5px;
         }
 
         .quote-btn {
@@ -61,12 +66,6 @@
             border-radius: 10px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .quote-btn:hover {
-            background: #191a23;
-            color: white;
         }
 
         .menu-toggle {
@@ -110,7 +109,7 @@
         }
 
         .hero-text h1 {
-            font-size: 2.5rem;
+            font-size: 40px;
             font-weight: 700;
             margin-bottom: 20px;
         }
@@ -139,41 +138,43 @@
             flex: 1;
         }
 
-        .highlight1 {
-            display: inline-flex;
-            align-items: center;
-            background-color: #ccff00;
+        .star {
+            display: flex;
             color: #191a23;
-            padding: 6px 14px;
+            /* padding: 6px 14px; */
             border-radius: 20px;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 20px;
             gap: 8px;
+            justify-content: left;
         }
 
         .star img {
             width: 40px;
-
+            margin-bottom: -10px;
+            margin-left: -23px;
         }
 
         .story-text .star {
             display: none;
+            color: #ccff00;
+            justify-content: left;
         }
 
         .highlight {
             display: inline-block;
             background-color: #ccff00;
             color: #191a23;
-            padding: 4px 10px;
+            padding: 0px 20px;
             border-radius: 4px;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 25px;
             margin-top: 14px;
         }
 
         .story-text h2 {
             margin: 20px 0;
-            font-size: 1.6rem;
+            font-size: 25px;
             font-weight: 700;
             color: #fff;
         }
@@ -182,27 +183,36 @@
             color: #ccc;
             margin-bottom: 25px;
             max-width: 420px;
-            font-size: 0.95rem;
+            font-size: 15px;
         }
 
         .read-link {
             color: #ccff00;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 16px;
             margin-left: 6px;
             vertical-align: middle;
+        }
+
+        .read-link img {
+            width: 40px;
+            margin-bottom: -17px;
         }
 
         .read-link2 {
             color: #ccff00;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 16px;
             margin-left: 6px;
             vertical-align: middle;
         }
 
+        .read2 img {
+            width: 40px;
+            margin-bottom: -17px;
+        }
 
         /* STATS GRID */
         .stats {
@@ -218,6 +228,7 @@
             border-radius: 15px;
             padding: 30px;
             text-align: center;
+            justify-content: center;
         }
 
         .stat-box h3 {
@@ -260,24 +271,36 @@
             }
 
             .story-text .highlight {
-                display: none;
+                display: block;
+                padding: 15px 20px;
+                margin: 10px 60px 0px 0px;
+            }
+
+            .quote-btn,
+            .menu-toggle {
+                display: inline-flex;
+                align-items: center;
             }
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 900px) {
             .hero {
                 background-color: #ffffff;
             }
 
             .hero-content {
                 flex-direction: column;
-                text-align: center;
+                justify-content: flex-start;
+                text-align: start;
             }
 
             .hero-text1 h1 {
                 display: block;
-                font-size: 2rem;
+                font-size: 35px;
                 margin-bottom: 20px;
+                text-align: left;
+                font-size: 50px;
+                margin: -80px 0px 10px;
             }
 
             .hero-text h1 {
@@ -299,15 +322,33 @@
             }
 
             .story-text p {
-                margin: 0 auto 20px;
+                margin: 20px 20px 0px 50px;
+                text-align: left;
+            }
+
+            .story-text h2 {
+                margin: 20px 20px 0px 50px;
+                text-align: left;
+            }
+
+            .story-text .highlight {
+                display: none;
             }
 
             .story-text .star {
                 display: block;
+                text-align: left;
             }
 
             .read-link {
                 display: none;
+            }
+
+            .stats {
+                justify-content: center;
+                display: grid;
+                gap: 20px;
+                margin: 0 auto;
             }
 
             .stats .read2 {
@@ -319,6 +360,10 @@
                 display: inline-block;
                 margin-bottom: 10px;
             }
+
+            .quote-btn {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -329,17 +374,22 @@
         <div class="logo">
             <img src="images/Positivuslogo.png" alt="Positivus Logo">
         </div>
-        <nav>
-            <div class="nav-links">
-                <a href="#">About Us</a>
-                <a href="#">Services</a>
-                <a href="#" class="active">Use Cases</a>
-                <a href="#">Pricing</a>
-                <a href="#">Blog</a>
+        <div class="nav-right">
+            <nav>
+                <div class="nav-links">
+                    <a href="#">About Us</a>
+                    <a href="#">Services</a>
+                    <a href="#" class="active">Use Cases</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Blog</a>
+                </div>
+            </nav>
+            <div class="right-menu">
+                <button class="quote-btn">Request a quote</button>
+
+                <div class="menu-toggle">☰</div>
             </div>
-        </nav>
-        <button class="quote-btn">Request a quote</button>
-        <div class="menu-toggle">☰</div>
+        </div>
     </header>
 
     <!-- HERO -->
