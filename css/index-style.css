@@ -1,0 +1,158 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: rgb(0, 0, 0);
+        font-family: 'Parkinsans';
+        color: #ffffff;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 40px;
+        background: #ffffff;
+    }
+
+    .content {
+        background-image: url(../images-index/backgroundimg2.jpeg);
+        background-size: cover;
+        align-self: start;
+        padding: 40px 20px;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile h3 {
+        font-size: 30px;
+    }
+
+    .profile h4 {
+        padding: 10px;
+    }
+
+    .profile p {
+        margin: 30px;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 30px;
+    }
+
+    .week-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .container {
+        display: flex;
+        color: black;
+    }
+
+    .container div {
+        width: 100%;
+        padding: 40px;
+        align-items: center;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.823);
+        border-radius: 20px;
+        margin: 5px;
+    }
+
+    .container img {
+        display: flex;
+        height: 30px;
+        width: 30px;
+    }
+
+    .container a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1px;
+        text-decoration: none;
+        color: rgb(80, 161, 201);
+    }
+
+    .container a:hover {
+        color: rgb(8, 69, 192);
+    }
+
+
+    .container2 {
+        display: flex;
+        color: #000;
+    }
+
+    .container2 div {
+        width: 100%;
+        padding: 40px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.823);
+        border-radius: 20px;
+        margin: 5px 0px;
+    }
+
+    .container2 img {
+        display: flex;
+        height: 30px;
+        width: 30px;
+    }
+
+    .container2 a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1px;
+        text-decoration: none;
+        color: rgb(80, 161, 201);
+    }
+
+    .container2 a:hover {
+        color: rgb(8, 69, 192);
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background: #ffffff;
+        color: #000;
+        padding: 5px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    .behance-icon {
+        margin-bottom: -8px;
+        text-decoration: none;
+        width: 45px;
+    }
+
+    .social-icon {
+        text-decoration: none;
+    }
+
+    @media (max-width:1000px) {
+        .container {
+            flex-direction: column;
+        }
+    }
