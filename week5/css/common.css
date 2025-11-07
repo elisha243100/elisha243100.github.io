@@ -7,3 +7,74 @@
       body {
           font-family: 'Space Grotesk', sans-serif;
       }
+
+      header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 30px 80px;
+      }
+
+      .logo img {
+          width: 130px;
+          height: auto;
+      }
+
+      .nav-right {
+          display: flex;
+          align-items: center;
+          gap: 25px;
+      }
+
+      .nav-links {
+          display: flex;
+          gap: 35px;
+      }
+
+      .nav-links a:hover {
+          color: #ccff00
+      }
+
+      .quote-btn {
+          border: 2px solid #191a23;
+          background: none;
+          padding: 12px 24px;
+          border-radius: 10px;
+          font-weight: 600;
+          cursor: pointer;
+      }
+
+      .quote-btn:hover {
+          color: #ccff00;
+          background-color: #191a23;
+      }
+
+      .menu-toggle {
+          display: none;
+          font-size: 26px;
+          cursor: pointer;
+      }
+
+      /* RESPONSIVE DESIGN */
+      @media (max-width:1000px) {
+
+          header {
+              padding: 25px 40px;
+          }
+
+          nav .nav-links {
+              display: none;
+          }
+
+          .quote-btn,
+          .menu-toggle {
+              display: inline-flex;
+              align-items: center;
+          }
+      }
+
+      @media (max-width: 900px) {
+          .quote-btn {
+              display: none;
+          }
+      }
