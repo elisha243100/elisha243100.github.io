@@ -35,19 +35,22 @@
           color: #ccff00
       }
 
+      .submenu a:hover {
+          color: #749100
+      }
+
       .submenu {
           display: none;
           position: absolute;
+          top: 87px;
           width: 160px;
-          z-index: 1;
-          background-color: #000000;
+          background-color: #ccff00;
           border-radius: 10px;
       }
 
       .submenu a {
           display: block;
           padding: 5px;
-          color: #fff;
       }
 
       .menu-item:hover .submenu {
