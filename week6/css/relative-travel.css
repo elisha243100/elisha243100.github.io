@@ -33,6 +33,11 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
+.icons {
+    width: 140px;
+    margin-left: -15px;
+}
+
 .trip-image {
     width: 100%;
     height: 100px;
@@ -70,7 +75,7 @@ body {
 .progress-card {
     position: absolute;
     left: 200px;
-    bottom: 20px;
+    bottom: 50px;
     background: #fff;
     height: fit-content;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -79,6 +84,17 @@ body {
     padding: 15px;
     display: flex;
     margin: 5px;
+}
+
+.peopleH {
+    display: flex;
+}
+
+.heart {
+    width: 20px;
+    height: 20px;
+    margin-top: 18px;
+    margin-left: 70px;
 }
 
 .status {
