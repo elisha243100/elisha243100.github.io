@@ -1,102 +1,106 @@
-      * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-      }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      body {
-          font-family: 'Space Grotesk', sans-serif;
-      }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
 
-      header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 30px 80px;
-      }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 80px;
+        }
 
-      .logo img {
-          width: 300px;
-          height: auto;
-      }
+        .logo img {
+            width: 300px;
+            height: auto;
+        }
 
-      .nav-right {
-          display: flex;
-          align-items: center;
-          gap: 25px;
-      }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
 
-      .nav-links {
-          display: flex;
-          gap: 35px;
-      }
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
 
-      .nav-links a:hover {
-          color: #ccff00
-      }
+        .menu-item {
+            position: relative;
+        }
 
-      .submenu a:hover {
-          color: #749100
-      }
+        .nav-links a:hover {
+            color: #ccff00
+        }
 
-      .submenu {
-          display: none;
-          position: absolute;
-          top: 87px;
-          width: 160px;
-          background-color: #ccff00;
-          border-radius: 10px;
-      }
+        .submenu a:hover {
+            color: #749100
+        }
 
-      .submenu a {
-          display: block;
-          padding: 5px;
-      }
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            width: 160px;
+            background-color: #ccff00;
+            border-radius: 10px;
+        }
 
-      .menu-item:hover .submenu {
-          display: block;
-      }
+        .submenu a {
+            display: block;
+            padding: 5px;
+        }
 
-      .quote-btn {
-          border: 2px solid #191a23;
-          background: none;
-          padding: 12px 24px;
-          border-radius: 10px;
-          font-weight: 600;
-          cursor: pointer;
-      }
+        .menu-item:hover .submenu {
+            display: block;
+        }
 
-      .quote-btn:hover {
-          color: #ccff00;
-          background-color: #191a23;
-      }
+        .quote-btn {
+            border: 2px solid #191a23;
+            background: none;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+        }
 
-      .menu-toggle {
-          display: none;
-          font-size: 26px;
-          cursor: pointer;
-      }
+        .quote-btn:hover {
+            color: #ccff00;
+            background-color: #191a23;
+        }
 
-      /* RESPONSIVE DESIGN */
-      @media (max-width:1000px) {
+        .menu-toggle {
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+        }
 
-          header {
-              padding: 25px 40px;
-          }
+        /* RESPONSIVE DESIGN */
+        @media (max-width:1000px) {
 
-          nav .nav-links {
-              display: none;
-          }
+            header {
+                padding: 25px 40px;
+            }
 
-          .quote-btn,
-          .menu-toggle {
-              display: inline-flex;
-              align-items: center;
-          }
-      }
+            nav .nav-links {
+                display: none;
+            }
 
-      @media (max-width: 900px) {
-          .quote-btn {
-              display: none;
-          }
-      }
+            .quote-btn,
+            .menu-toggle {
+                display: inline-flex;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .quote-btn {
+                display: none;
+            }
+        }

@@ -148,24 +148,14 @@ body {
     border-radius: 4px;
 }
 
-@media (max-width: 1024px) {
-    .cards-row {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .progress-card {
-        right: -30px;
-    }
-}
 
 @media (max-width: 700px) {
-    .trip-card {
-        width: 280px;
+    .progress-card {
+        position: absolute;
+        left: 130px;
     }
 
-    .progress-card {
-        right: 0;
-        bottom: -70px;
+    .card {
+        margin-left: -30px;
     }
 }
