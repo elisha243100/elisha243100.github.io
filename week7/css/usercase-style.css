@@ -194,10 +194,6 @@
         display: none;
     }
 
-    .menu-toggle {
-        display: block;
-    }
-
     .hero {
         margin: 40px 20px;
         padding: 40px;
@@ -214,11 +210,6 @@
         margin: 10px 60px 0px 0px;
     }
 
-    .quote-btn,
-    .menu-toggle {
-        display: inline-flex;
-        align-items: center;
-    }
 }
 
 @media (max-width: 900px) {
@@ -297,9 +288,5 @@
     .highlight1 {
         display: inline-block;
         margin-bottom: 10px;
-    }
-
-    .quote-btn {
-        display: none;
     }
 }

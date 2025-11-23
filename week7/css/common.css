@@ -138,11 +138,10 @@
                 display: none;
             }
 
-            .quote-btn,
-            .menu-toggle {
-                display: inline-flex;
-                align-items: center;
+            .quote-btn {
+                display: none;
             }
+
 
             .menu-toggle {
                 display: block;
