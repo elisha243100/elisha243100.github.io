@@ -96,6 +96,37 @@
             display: block;
         }
 
+        .request-btn-mobile {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .request-btn-mobile .qbtn2 {
+            display: none;
+            width: 80%;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        .qbtn2 {
+            border: 2px solid #191a23;
+            background: none;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .qbtn2:hover {
+            color: #ccff00;
+            background-color: #191a23;
+        }
+
         .quote-btn {
             border: 2px solid #191a23;
             background: none;
@@ -158,7 +189,7 @@
                 width: 100%;
                 padding-top: 5rem;
                 text-align: center;
-                z-index: 1000;
+                z-index: 1100;
             }
 
             .menu.active {
@@ -172,12 +203,16 @@
             .menu-item a {
                 font-size: 1.5rem;
             }
+
+            .request-btn {
+                display: block;
+            }
         }
 
 
-
         @media (max-width: 900px) {
-            .quote-btn {
+            .right-menu>.quote-btn {
                 display: none;
             }
+
         }
