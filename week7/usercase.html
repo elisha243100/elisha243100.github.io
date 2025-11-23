@@ -13,7 +13,15 @@
 </head>
 
 <body>
+
     <header>
+        <nav class="mobile-menu" id="mobile-menu">
+            <div class="menu-item"><a href="#">About Us</a></div>
+            <div class="menu-item"><a href="#">Services</a></div>
+            <div class="menu-item"><a href="active">Use Cases</a></div>
+            <div class="menu-item"><a href="#">Pricing</a></div>
+            <div class="menu-item"><a href="#">Blog</a></div>
+        </nav>
         <div class="logo">
             <a href="home.html">
                 <img src="images/Positivuslogo.png" alt="Positivus Logo">
@@ -39,14 +47,15 @@
                             <a href="#">Service C</a>
                         </div>
                     </div>
-                    <a href="#" class="active">Use Cases</a>
-                    <a href="#">Pricing</a>
-                    <a href="#">Blog</a>
+                    <div class="menu-item"><a href="active">Use Cases</a></div>
+                    <div class="menu-item"><a href="#">Pricing</a></div>
+                    <div class="menu-item"><a href="#">Blog</a></div>
                 </div>
             </nav>
             <div class="right-menu">
                 <button class="quote-btn">Request a quote</button>
-                <div class="menu-toggle">☰</div>
+
+                <div class="menu-toggle" id="menu-toggle">☰</div>
             </div>
         </div>
     </header>
@@ -105,6 +114,20 @@
             </div>
         </div>
     </section>
+    <script>
+        const toggleButton = document.getElementById("menu-toggle");
+        const menu = document.getElementById("mobile-menu");
+
+        toggleButton.addEventListener("click", () => {
+            menu.classList.toggle("active");
+
+            if (menu.classList.contains("active")) {
+                toggleButton.innerHTML = "&times;";
+            } else {
+                toggleButton.innerHTML = "&#9776;";
+            }
+        });
+    </script>
 </body>
 
 </html>
